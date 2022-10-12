@@ -1,5 +1,6 @@
 import { useState, useEffect, FC, KeyboardEvent } from 'react'
 import { SearchEngine } from './interface'
+import { getImageUrl } from '@u/util'
 import './style.less'
 
 
@@ -75,13 +76,13 @@ const Search: FC = () => {
                 {
                     searchEngineList.map((searchEngine: SearchEngine, index) => (
                         <div className={`search-engine-item ${activeEngineIndex === index ? 'active' : ''}`} key={index}>
-                            <img onClick={() => setActiveEngineIndex(index)} src={`/images/${searchEngine.img}`} />
+                            <img onClick={() => onEngineImgClick(index)} src={getImageUrl(searchEngine.img)} />
                         </div>
                     ))
                 }
             </div>
             <div className={`search-input ${focusClass}`}>
-                <div className='img-search'><img src='/images/search.jpg' /></div>
+                <div className='img-search'><img src={getImageUrl('search.jpg')} /></div>
                 <input
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
