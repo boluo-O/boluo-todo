@@ -1,0 +1,32 @@
+.todo-box {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    min-height: 650px;
+
+    .todo-list {
+        height: calc(100vh - 500px);
+        margin-bottom: 16px;
+        overflow: auto;
+
+        ul {
+            padding-left: 20px;
+
+            li:has(.todo-item-completed) {
+                &::before {
+                    color: #10161a66;
+                }
+            }
+        }
+    }
+
+    .statistics {
+        position: absolute;
+        bottom: 16px;
+
+        span {
+            margin-right: 16px;
+        }
+    }
+}

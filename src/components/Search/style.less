@@ -1,0 +1,76 @@
+.search {
+    margin-top: 120px;
+
+    .search-engine-list {
+        display: flex;
+        justify-content: center;
+
+        .active {
+            // border: 1px solid red;
+            perspective: 500px;
+            transform: scale(1.35);
+
+            img {
+                transition: 0.1s;
+            }
+        }
+
+        .search-engine-item {
+            margin: 16px;
+
+            img {
+                background: #dfe1e5;
+                border-radius: 20px;
+                // border-radius: 24px;
+                // cursor: pointer;
+                cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0, pointer;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .search-input {
+        height: 44px;
+        max-width: 584px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #dfe1e5;
+        border-radius: 24px;
+        margin: 0 auto;
+        padding-right: 20px;
+        background: #fff;
+
+
+        .img-search {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            margin-left: 11px;
+        }
+
+        input {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Rooto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-weight: 400;
+            text-shadow: none !important;
+            height: 100%;
+            flex: 100%;
+            border: none;
+            outline: none;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background-color: transparent;
+            color: rgba(0, 0, 0, .87);
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
+
+    .search-input:hover,
+    .focus {
+        background-color: #fff;
+        box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+        border-color: rgba(223, 225, 229, 0);
+    }
+}

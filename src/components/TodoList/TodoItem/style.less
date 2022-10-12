@@ -1,0 +1,32 @@
+.todo-item {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    margin-bottom: 3px;
+
+    &-content {
+        flex: 1;
+    }
+
+    .nes-btn {
+        width: 64px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .input-edit {
+        flex: 1;
+        height: 48px;
+        margin-right: 230px;
+    }
+}
+
+.todo-item-completed {
+    .todo-item-content {
+        color: #10161a66;
+        text-decoration: line-through;
+    }
+}
