@@ -51,7 +51,7 @@ const Search: FC = () => {
     const onTab = (e: KeyboardEvent<HTMLInputElement>, isShift: boolean = false) => {
         e.preventDefault()
         const searchEngineNum = searchEngineList.length
-        // 向 左/右 切换搜索引擎
+        // 左/右 切换搜索引擎
         const step = isShift ? -1 : 1
         const _activeEngineIndex = (activeEngineIndex + step + searchEngineNum) % searchEngineNum
         setActiveEngineIndex(_activeEngineIndex)
